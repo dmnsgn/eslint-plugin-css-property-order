@@ -1,0 +1,13 @@
+/web_modules
+/examples
+/docs
+/coverage
+/test
+/scripts
+/vendor
+/.github
+screenshot.*
+index.html
+tsconfig.json
+.editorconfig
+.nojekyll

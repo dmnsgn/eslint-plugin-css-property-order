@@ -1,0 +1,9 @@
+{
+  "repository": "https://chromium.googlesource.com/devtools/devtools-frontend/+/refs/heads/main",
+  "commit": "92188bb1269ae23ed301b6bcd82d3ac453000682",
+  "fetchedAt": "2026-07-17T20:35:09.931Z",
+  "files": [
+    "front_end/panels/elements/PropertyNameCategories.ts",
+    "front_end/generated/SupportedCSSProperties.js"
+  ]
+}
