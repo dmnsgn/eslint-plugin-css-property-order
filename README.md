@@ -132,7 +132,689 @@ Extraction limits (by design): template literals containing `${}` substitutions 
 
 <!-- api-start -->
 
-Auto-generated API content.
+## Modules
+
+<dl>
+<dt><a href="#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_">eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- `recess` (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</a></dt>
+
+<dd></dd>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#remapFix">remapFix(fix, offset)</a> ⇒ <code>object</code></dt>
+<dd></dd>
+<dt><a href="#remapMessage">remapMessage(message, offset, lineOffset, columnOffset)</a> ⇒ <code>object</code></dt>
+<dd><p>Maps a lint message from block coordinates to host-file coordinates.</p>
+</dd>
+<dt><a href="#createExtractionProcessor">createExtractionProcessor(options)</a> ⇒ <code>object</code></dt>
+<dd><p>Creates an ESLint processor extracting CSS blocks from a host file.</p>
+</dd>
+<dt><a href="#preprocess">preprocess(text, filename)</a> ⇒ <code><a href="#VirtualFile">Array.&lt;VirtualFile&gt;</a></code></dt>
+<dd></dd>
+<dt><a href="#postprocess">postprocess(messageLists, filename)</a> ⇒ <code>Array.&lt;object&gt;</code></dt>
+<dd></dd>
+<dt><a href="#extractStyleTags">extractStyleTags(text)</a> ⇒ <code><a href="#ExtractedBlock">Array.&lt;ExtractedBlock&gt;</a></code></dt>
+<dd></dd>
+<dt><a href="#createHtmlProcessor">createHtmlProcessor([options])</a> ⇒ <code>object</code></dt>
+<dd><p>Creates the HTML processor.</p>
+</dd>
+<dt><a href="#skipString">skipString(text, start)</a> ⇒ <code>number</code></dt>
+<dd></dd>
+<dt><a href="#skipTemplate">skipTemplate(text, start)</a> ⇒ <code><a href="#TemplateSpan">TemplateSpan</a></code></dt>
+<dd></dd>
+<dt><a href="#skipSubstitution">skipSubstitution(text, start)</a> ⇒ <code>number</code></dt>
+<dd></dd>
+<dt><a href="#extractCssTemplates">extractCssTemplates(text, tags)</a> ⇒ <code><a href="#ExtractedBlock">Array.&lt;ExtractedBlock&gt;</a></code></dt>
+<dd></dd>
+<dt><a href="#createTaggedTemplateProcessor">createTaggedTemplateProcessor([options])</a> ⇒ <code>object</code></dt>
+<dd><p>Creates the tagged-template processor.</p>
+</dd>
+<dt><a href="#alphabeticalKey">alphabeticalKey(name)</a> ⇒ <code>[string, number, string]</code></dt>
+<dd><p>Alphabetical sort key: compares on the unprefixed name, with prefixed
+variants right before their unprefixed property (&quot;-webkit-transform&quot; before
+&quot;transform&quot;), matching the fallback order the cascade requires.</p>
+</dd>
+<dt><a href="#createOrderIndex">createOrderIndex(order)</a> ⇒ <code>Map.&lt;string, number&gt;</code></dt>
+<dd><p>Flattens an order option into a property → index map.</p>
+</dd>
+<dt><a href="#isCustomProperty">isCustomProperty(decl)</a> ⇒ <code>boolean</code></dt>
+<dd></dd>
+</dl>
+
+## Typedefs
+
+<dl>
+<dt><a href="#ExtractedBlock">ExtractedBlock</a> : <code>object</code></dt>
+<dd><p>A CSS segment found in a host file.</p>
+</dd>
+<dt><a href="#VirtualFile">VirtualFile</a> : <code>object</code></dt>
+<dd><p>A virtual file emitted for a host file, as ESLint&#39;s processor API expects.</p>
+</dd>
+<dt><a href="#TemplateSpan">TemplateSpan</a> : <code>object</code></dt>
+<dd></dd>
+<dt><a href="#NumberOrString">NumberOrString</a> : <code>number</code> | <code>string</code></dt>
+<dd></dd>
+<dt><a href="#SortKey">SortKey</a> : <code><a href="#NumberOrString">Array.&lt;NumberOrString&gt;</a></code></dt>
+<dd><p>A declaration&#39;s ordering key: tier first, then tiebreakers, compared
+element-wise against another key of the same shape.</p>
+</dd>
+</dl>
+
+<a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_"></a>
+
+## eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- `recess` (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.
+
+* [eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- `recess` (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  - [~PropertyGroup](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyGroup) : <code>object</code>
+  - [~PropertyOrderEntry](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrderEntry) : <code>string</code> \| <code>module:eslint~PropertyGroup</code>
+  - [~CustomPropertyOrder](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..CustomPropertyOrder) : <code>Array.&lt;module:eslint~PropertyOrderEntry&gt;</code>
+  - [~PropertyOrder](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrder) : <code>&quot;devtools&quot;</code> \| <code>&quot;recess&quot;</code> \| <code>&quot;alphabetical&quot;</code> \| <code>module:eslint~CustomPropertyOrder</code>
+  - [~PropertyOrderRuleOptions](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrderRuleOptions) : <code>object</code>
+
+<a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyGroup"></a>
+
+### eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.~PropertyGroup : <code>object</code>
+  A named group of properties within a custom order. Group boundaries have no
+  effect on ordering; they only help organising the list.
+
+**Kind**: inner typedef of [<code>eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</code>](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  **Properties**
+
+| Name       | Type                              | Description                                  |
+| ---------- | --------------------------------- | -------------------------------------------- |
+| [name]     | <code>string</code>               | Group name, for documentation purposes only. |
+| properties | <code>Array.&lt;string&gt;</code> | Property names in the group.                 |
+
+<a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrderEntry"></a>
+
+### eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.~~PropertyOrderEntry : <code>string</code> \| <code>module:eslint~~PropertyGroup</code>
+  One entry of a custom order: a property name, or a group of property names.
+
+**Kind**: inner typedef of [<code>eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</code>](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  <a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..CustomPropertyOrder"></a>
+
+### eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.~~CustomPropertyOrder : <code>Array.&lt;module:eslint~~PropertyOrderEntry&gt;</code>
+  A custom order: an array of property names and/or groups of property names.
+
+**Kind**: inner typedef of [<code>eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</code>](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  <a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrder"></a>
+
+### eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.~~PropertyOrder : <code>&quot;devtools&quot;</code> \| <code>&quot;recess&quot;</code> \| <code>&quot;alphabetical&quot;</code> \| <code>module:eslint~~CustomPropertyOrder</code>
+  A built-in order name, or a custom order (see [module:eslint~CustomPropertyOrder](module:eslint~CustomPropertyOrder)).
+  `"alphabetical"` needs no property list: it compares names directly
+  (vendor-prefixed properties sort right before their unprefixed counterpart,
+  as the cascade requires), so it covers every CSS property, present and
+  future, and `unspecified` does not apply.
+
+**Kind**: inner typedef of [<code>eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</code>](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  <a name="eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_..PropertyOrderRuleOptions"></a>
+
+### eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.~PropertyOrderRuleOptions : <code>object</code>
+  Options for the `css-property-order/property-order` rule.
+
+**Kind**: inner typedef of [<code>eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https://github.com/eslint/css) language plugin.
+
+Ships two built-in orders:
+
+- &#x60;recess&#x60; (default): the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- &#x60;devtools&#x60;: the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.</code>](#eslint-plugin-css-property-order
+
+ESLint plugin enforcing CSS declaration order, for use with the official
+[@eslint/css](https_//github.com/eslint/css) language plugin.
+
+Ships two built-in orders_
+
+- `recess` (default)_ the Recess/Bootstrap logical order — positioning,
+  box model, typography, visual, animation, misc.
+- `devtools`_ the order Chrome DevTools uses in the Computed panels
+  grouped view, generated from the DevTools sources.module_)
+  **Properties**
+
+| Name               | Type                                                                                                                                              | Default                         | Description                                                                                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [order]            | <code>module:eslint~PropertyOrder</code>                                                                                                          | <code>&quot;recess&quot;</code> | The property order to enforce.                                                                                                                                                                        |
+| [unspecified]      | <code>&quot;ignore&quot;</code> \| <code>&quot;top&quot;</code> \| <code>&quot;bottom&quot;</code> \| <code>&quot;bottomAlphabetical&quot;</code> | <code>&quot;ignore&quot;</code> | Where properties absent from the order (e.g. newer than the list) belong: left where they are, before all listed properties, after them (keeping their relative order), or after them alphabetically. |
+| [customProperties] | <code>&quot;top&quot;</code> \| <code>&quot;ignore&quot;</code>                                                                                   | <code>&quot;top&quot;</code>    | Whether custom properties (`--*`) must come first in a block (keeping their relative order), or are left where they are.                                                                              |
+
+<a name="remapFix"></a>
+
+## remapFix(fix, offset) ⇒ <code>object</code>
+
+**Kind**: global function
+**Returns**: <code>object</code> - The remapped fix
+
+| Param  | Type                | Description                     |
+| ------ | ------------------- | ------------------------------- |
+| fix    | <code>object</code> | An ESLint fix ({ range, text }) |
+| offset | <code>number</code> | Host-file offset of the block   |
+
+<a name="remapMessage"></a>
+
+## remapMessage(message, offset, lineOffset, columnOffset) ⇒ <code>object</code>
+
+Maps a lint message from block coordinates to host-file coordinates.
+
+**Kind**: global function
+**Returns**: <code>object</code> - The remapped message
+
+| Param        | Type                | Description                                |
+| ------------ | ------------------- | ------------------------------------------ |
+| message      | <code>object</code> | An ESLint message                          |
+| offset       | <code>number</code> | Host-file offset of the block              |
+| lineOffset   | <code>number</code> | Lines before the block in the host file    |
+| columnOffset | <code>number</code> | Column of the block start on its host line |
+
+<a name="createExtractionProcessor"></a>
+
+## createExtractionProcessor(options) ⇒ <code>object</code>
+
+Creates an ESLint processor extracting CSS blocks from a host file.
+
+**Kind**: global function
+**Returns**: <code>object</code> - An ESLint processor
+
+| Param              | Type                  | Description                                                                                                                                                                                                                                    |
+| ------------------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options            | <code>object</code>   |                                                                                                                                                                                                                                                |
+| options.name       | <code>string</code>   | Processor name (for meta)                                                                                                                                                                                                                      |
+| options.extract    | <code>function</code> | Finds CSS blocks                                                                                                                                                                                                                               |
+| options.emitSource | <code>boolean</code>  | Whether to re-emit the host file as a bare-string block, linted under the host filename so its own language (or a patching plugin such as eslint-plugin-html) keeps linting it. Enable only when some config handles the host file as non-CSS. |
+
+<a name="preprocess"></a>
+
+## preprocess(text, filename) ⇒ [<code>Array.&lt;VirtualFile&gt;</code>](#VirtualFile)
+
+**Kind**: global function
+**Returns**: [<code>Array.&lt;VirtualFile&gt;</code>](#VirtualFile) - Virtual files
+
+| Param    | Type                | Description       |
+| -------- | ------------------- | ----------------- |
+| text     | <code>string</code> | Host file content |
+| filename | <code>string</code> | Host file path    |
+
+<a name="postprocess"></a>
+
+## postprocess(messageLists, filename) ⇒ <code>Array.&lt;object&gt;</code>
+
+**Kind**: global function
+**Returns**: <code>Array.&lt;object&gt;</code> - Messages mapped to host-file coordinates
+
+| Param        | Type                                            | Description               |
+| ------------ | ----------------------------------------------- | ------------------------- |
+| messageLists | <code>Array.&lt;Array.&lt;object&gt;&gt;</code> | One list per virtual file |
+| filename     | <code>string</code>                             | Host file path            |
+
+<a name="extractStyleTags"></a>
+
+## extractStyleTags(text) ⇒ [<code>Array.&lt;ExtractedBlock&gt;</code>](#ExtractedBlock)
+
+**Kind**: global function
+
+| Param | Type                | Description |
+| ----- | ------------------- | ----------- |
+| text  | <code>string</code> | HTML source |
+
+<a name="createHtmlProcessor"></a>
+
+## createHtmlProcessor([options]) ⇒ <code>object</code>
+
+Creates the HTML processor.
+
+**Kind**: global function
+**Returns**: <code>object</code> - An ESLint processor
+
+| Param                | Type                 | Default            | Description                                                                                                                                                                                                                                            |
+| -------------------- | -------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [options]            | <code>object</code>  |                    |                                                                                                                                                                                                                                                        |
+| [options.emitSource] | <code>boolean</code> | <code>false</code> | Also re-emit the HTML source so whatever handles the host file (an HTML language config, or a patching plugin such as eslint-plugin-html) keeps linting it. Leave off unless such a config exists: the source would otherwise be parsed as JavaScript. |
+
+<a name="skipString"></a>
+
+## skipString(text, start) ⇒ <code>number</code>
+
+**Kind**: global function
+**Returns**: <code>number</code> - Index after the closing quote (or line end if unterminated)
+
+| Param | Type                | Description                |
+| ----- | ------------------- | -------------------------- |
+| text  | <code>string</code> | Source                     |
+| start | <code>number</code> | Index of the opening quote |
+
+<a name="skipTemplate"></a>
+
+## skipTemplate(text, start) ⇒ [<code>TemplateSpan</code>](#TemplateSpan)
+
+**Kind**: global function
+
+| Param | Type                | Description                   |
+| ----- | ------------------- | ----------------------------- |
+| text  | <code>string</code> | Source                        |
+| start | <code>number</code> | Index of the opening backtick |
+
+<a name="skipSubstitution"></a>
+
+## skipSubstitution(text, start) ⇒ <code>number</code>
+
+**Kind**: global function
+**Returns**: <code>number</code> - Index after the matching "}"
+
+| Param | Type                | Description      |
+| ----- | ------------------- | ---------------- |
+| text  | <code>string</code> | Source           |
+| start | <code>number</code> | Index after "${" |
+
+<a name="extractCssTemplates"></a>
+
+## extractCssTemplates(text, tags) ⇒ [<code>Array.&lt;ExtractedBlock&gt;</code>](#ExtractedBlock)
+
+**Kind**: global function
+
+| Param | Type                              | Description                      |
+| ----- | --------------------------------- | -------------------------------- |
+| text  | <code>string</code>               | JavaScript/TypeScript source     |
+| tags  | <code>Array.&lt;string&gt;</code> | Template tag names that mark CSS |
+
+<a name="createTaggedTemplateProcessor"></a>
+
+## createTaggedTemplateProcessor([options]) ⇒ <code>object</code>
+
+Creates the tagged-template processor.
+
+**Kind**: global function
+**Returns**: <code>object</code> - An ESLint processor
+
+| Param                | Type                              | Default                        | Description                                                                            |
+| -------------------- | --------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------- |
+| [options]            | <code>object</code>               |                                |                                                                                        |
+| [options.tags]       | <code>Array.&lt;string&gt;</code> | <code>[&quot;css&quot;]</code> | Template tag names to extract. The `\/* css *\/` comment form is always recognised.    |
+| [options.emitSource] | <code>boolean</code>              | <code>true</code>              | Also re-emit the JS/TS source so regular JavaScript linting keeps running on the file. |
+
+<a name="alphabeticalKey"></a>
+
+## alphabeticalKey(name) ⇒ <code>[string, number, string]</code>
+
+Alphabetical sort key: compares on the unprefixed name, with prefixed
+variants right before their unprefixed property ("-webkit-transform" before
+"transform"), matching the fallback order the cascade requires.
+
+**Kind**: global function
+
+| Param | Type                | Description              |
+| ----- | ------------------- | ------------------------ |
+| name  | <code>string</code> | Lowercased property name |
+
+<a name="createOrderIndex"></a>
+
+## createOrderIndex(order) ⇒ <code>Map.&lt;string, number&gt;</code>
+
+Flattens an order option into a property → index map.
+
+**Kind**: global function
+
+| Param | Type                       |
+| ----- | -------------------------- |
+| order | <code>PropertyOrder</code> |
+
+<a name="isCustomProperty"></a>
+
+## isCustomProperty(decl) ⇒ <code>boolean</code>
+
+**Kind**: global function
+
+| Param | Type                | Description        |
+| ----- | ------------------- | ------------------ |
+| decl  | <code>object</code> | A Declaration node |
+
+<a name="ExtractedBlock"></a>
+
+## ExtractedBlock : <code>object</code>
+
+A CSS segment found in a host file.
+
+**Kind**: global typedef
+**Properties**
+
+| Name   | Type                | Description                                   |
+| ------ | ------------------- | --------------------------------------------- |
+| offset | <code>number</code> | Start offset of the CSS text in the host file |
+| text   | <code>string</code> | The CSS text, verbatim                        |
+
+<a name="VirtualFile"></a>
+
+## VirtualFile : <code>object</code>
+
+A virtual file emitted for a host file, as ESLint's processor API expects.
+
+**Kind**: global typedef
+**Properties**
+
+| Name     | Type                | Description          |
+| -------- | ------------------- | -------------------- |
+| text     | <code>string</code> | The file content     |
+| filename | <code>string</code> | The virtual filename |
+
+<a name="TemplateSpan"></a>
+
+## TemplateSpan : <code>object</code>
+
+**Kind**: global typedef
+**Properties**
+
+| Name  | Type                 | Description                                                          |
+| ----- | -------------------- | -------------------------------------------------------------------- |
+| end   | <code>number</code>  | Index after the closing backtick                                     |
+| clean | <code>boolean</code> | Whether the template body is verbatim CSS (no substitutions/escapes) |
+
+<a name="NumberOrString"></a>
+
+## NumberOrString : <code>number</code> \| <code>string</code>
+
+**Kind**: global typedef
+<a name="SortKey"></a>
+
+## SortKey : [<code>Array.&lt;NumberOrString&gt;</code>](#NumberOrString)
+
+A declaration's ordering key: tier first, then tiebreakers, compared
+element-wise against another key of the same shape.
+
+**Kind**: global typedef
 
 <!-- api-end -->
 
